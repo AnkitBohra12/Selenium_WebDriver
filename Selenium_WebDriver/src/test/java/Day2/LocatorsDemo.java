@@ -6,12 +6,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 public class LocatorsDemo {
 
 	public static void main(String[] args) {
 		
 		WebDriver driver = new ChromeDriver();
+//		WebDriver drivers = new EdgeDriver();
 		driver.get("https://demo.opencart.com/");
 		driver.manage().window().maximize();
 		
@@ -38,6 +40,7 @@ public class LocatorsDemo {
 		System.out.println("Total number of images : " + images.size());
 		
 		driver.close();	
+		driver.quit();
 	}
 
 }
